@@ -1,0 +1,1 @@
+Exercícios feitos em casa, para desenvolvimento de pensamento em lógica, repetição de exercícios e solução de problemas. 
