@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora_para_Motoristas</title>
+</head>
+<body>
+    <h1>CALCULADORA PARA MOTORISTAS ESPERTOS</h1>
+    <hr></hr>
+    <form action="">
+        Quanto você tem em mãos: R$<br/>
+        <input type="text" id="dinheiro"><br/><br/>
+        <button onclick="Calculadora()">Calcular</button>
+    </form>
+
+<script>
+    // ENTRADA: 
+
+let dinheiro = parseFloat(prompt("Digite quanto você tem em dinheiro: "));
+
+// PROCESSAMENTO:
+
+let litros = dinheiro / 5;
+let distancia = litros * 20;
+
+// SAÍDA: 
+
+document.write("Você pode abastecer: "+ litros+ " litros"+ "<br/>");
+document.write("Você pode andar uma distância de: "+ distancia + " km"+ "<br/>");
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<script>
+/* TAREFA: 
+    Um novo modelo de carro, super econômico foi lançado.
+    Ele faz 20 km com 1 litro de combustível.
+    Cada litro de combustível custa R$ 5,00.
+    Faça um programa que pergunte ao usuário quanto de dinheiro ele tem,
+    e em seguida diga quantos litros de combustível ele pode comprar
+    e quantos kilometros o carro consegue andar com este tanto de combustível.
+
+    1- Perguntar quanto dinheiro a pessoa tem:
+    2- Descobrir quantos litros ela pode comprar:
+    3- Descobrir quantos km dá pra rodar com isso:
+*/
+// ENTRADA: 
+
+let dinheiro = parseFloat(prompt("Digite quanto você tem em dinheiro: "));
+
+// PROCESSAMENTO:
+
+let litros = dinheiro / 5;
+let distancia = litros * 20;
+
+// SAÍDA: 
+
+document.write("Você pode abastecer: "+ litros+ " litros"+ "<br/>");
+document.write("Você pode andar uma distância de: "+ distancia + " km"+ "<br/>");
+
+
+
+</script>
