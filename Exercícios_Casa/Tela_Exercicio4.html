@@ -6,13 +6,14 @@
     <title>Calculadora para Motoristas</title>
 </head>
 <body>
-    <center>
-        <h1>CALCULADORA PARA MOTORISTAS ESPERTOS</h1>
+<center><h1>CALCULADORA PARA MOTORISTAS ESPERTOS</h1></center>
     <hr></hr>
-    <form>
+<center>
+<form onsubmit="event.preventDefault(); Calculadora();">
     <label>Valor disponível para abastecimento:<br/><br/></label>  
     <input type="number" id="dinheiro"><br/><br/><br/>
-</form></center>
+</form>
+</center>
     <center><button type="button" onclick="Calculadora()">Calcular</button></center>
 
     <br/>   
@@ -49,8 +50,9 @@ function Calculadora() {
     E O QUANTO ELE PODERÁ PERCORRER, COM OS LITROS ABASTECIDOS.
     */
 
+    /* A LINHA 12, SERVE PARA QUE O CÁLCULO SEJA FEITO TAMBÉM COM O BOTÃO ENTER, 
+    */ 
 }
-
 
 </script>
 </body>
