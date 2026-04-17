@@ -3,31 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora_para_Motoristas</title>
+    <title>Calculadora para Motoristas</title>
 </head>
 <body>
-    <h1>CALCULADORA PARA MOTORISTAS ESPERTOS</h1>
+    <center>
+        <h1>CALCULADORA PARA MOTORISTAS ESPERTOS</h1>
     <hr></hr>
-    <form action="">
-        Quanto você tem em mãos: R$<br/>
-        <input type="text" id="dinheiro"><br/><br/>
-        <button onclick="Calculadora()">Calcular</button>
-    </form>
+    <form>
+    <label>Valor disponível para abastecimento:<br/><br/></label>  
+    <input type="number" id="dinheiro"><br/><br/><br/>
+</form></center>
+    <center><button type="button" onclick="Calculadora()">Calcular</button></center>
+
+    <br/>   
+
+<p id="resultado"></p>
+
 
 <script>
-    // ENTRADA: 
 
-let dinheiro = parseFloat(prompt("Digite quanto você tem em dinheiro: "));
+function Calculadora() {
 
-// PROCESSAMENTO:
+    //ENTRADA:
 
-let litros = dinheiro / 5;
-let distancia = litros * 20;
+    let dinheiro = parseFloat(document.getElementById('dinheiro').value);    
+     /* ACIMA EU PEGUEI A RESPOSTA DO USUÁRIO NA CX E JÁ CONVERTI EM NÚMEROS;
+ */
+    
+    // PROCESSAMENTO:
 
-// SAÍDA: 
+    let litros = dinheiro / 5;
+    let distancia = litros * 20;
 
-document.write("Você pode abastecer: "+ litros+ " litros"+ "<br/>");
-document.write("Você pode andar uma distância de: "+ distancia + " km"+ "<br/>");
+
+    // SAÍDA:
+
+    document.getElementById('resultado').innerHTML = 
+        "Você pode abastecer " + litros + " litros, " +
+        "e percorrer uma distância de  " + distancia +  " km.";
+
+}
 
 
 </script>
