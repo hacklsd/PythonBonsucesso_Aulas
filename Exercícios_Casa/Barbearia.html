@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FATURAMENTO BARBEARIA</title>
+</head>
+
+<body>
+    <center>
+        <h1>Calculadora de Faturamento para Barbeiros:</h1>
+        <hr></hr><br/>
+        • Valores Fixados: Corte R$ 25,00 // Barba R$ 15,00 // Combo R$ 35,00 <br/><br/>
+    </center>
+    <form onsubmit="event.preventDefault(); calculadora();">
+        <center><label for="cortes">Insira quantos cortes foram feitos hoje: </label></center>
+        <center><input type="number" id="corte"><br/><br/></center></form>  
+      
+    
+        <center><label for="barbas">Insira quantas barbas foram feitas hoje: </label></center>
+        <center><input type="number" id="barba"><br/><br/></center>
+
+   
+        <center><label for="combos">Insira quantos combos foram feitos hoje: </label></center>
+        <center><input type="number" id="combo"><br/><br/></center>
+    </form>  
+
+        <center><button type="button" onclick="calculadora()">Calcular</button></center><br/>
+
+    <p id="totalcortes"></p>
+    <p id="totalbarbas"></p>
+    <p id="totalcombos"></p>
+    <p id="totalfaturamento"></p>
+
+</body>
+    <script>
+
+        function calculadora() {
+            
+            let cortes = parseInt(document.getElementById('corte').value) || 0; // o adicional (|| 0) serve para quando o usuário não digitar um valor, virar zero. ALT + 124 para o travessão
+            let barbas = parseInt(document.getElementById('barba').value) || 0;
+            let combos = parseInt(document.getElementById('combo').value) || 0;
+
+            let totalcortes = cortes * 25;
+            let totalbarbas = barbas * 15;
+            let totalcombos = combos * 35;
+            let faturamentototal = totalcortes + totalbarbas + totalcombos;
+
+            document.getElementById('totalfaturamento').innerHTML =
+            "Hoje a barbearia faturou R$ " + faturamentototal + ",00. " +
+            "Foram R$ " + totalcortes + " em cortes, R$ " + totalbarbas + 
+            " em barbas e R$ " + totalcombos + " em combos.";   
+
+            
+        }
+
+        /* 💈 Problema: Calculadora de faturamento da barbearia
+
+Uma barbearia cobra valores fixos pelos serviços:
+
+Corte de cabelo: R$ 25,00
+Barba: R$ 15,00
+Combo (corte + barba): R$ 35,00
+
+O dono da barbearia quer um programa que ajude a entender quanto vai faturar em um dia.
+
+📌 O que o programa deve fazer:
+Perguntar ao usuário:
+Quantos cortes foram feitos no dia
+Quantas barbas foram feitas no dia
+Quantos combos foram vendidos no dia
+Calcular:
+O total arrecadado com cortes
+O total arrecadado com barbas
+O total arrecadado com combos
+O faturamento total do dia
+Mostrar na tela uma mensagem final como:
+
+"Hoje a barbearia faturou R$ X. Foram X em cortes, X em barbas e X em combos."
+
+🧠 Desafio extra (se quiser evoluir depois)
+Calcular quantos clientes passaram no total
+Calcular a média de faturamento por cliente
+Mostrar qual serviço mais gerou dinheiro
+*/ 
+    </script>
+</html>
