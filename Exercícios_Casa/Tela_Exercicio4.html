@@ -34,13 +34,20 @@ function Calculadora() {
 
     let litros = dinheiro / 5;
     let distancia = litros * 20;
-
+    /* ACIMA SÃO AS OPERAÇÕES PARA REALIZAR OS CÁLCULOS, DEFININDO O VALOR POR LITRO, 
+        E A DISTÂNCIA QUE PERCORRE COM CADA LITRO;
+    */
 
     // SAÍDA:
 
     document.getElementById('resultado').innerHTML = 
         "Você pode abastecer " + litros + " litros, " +
         "e percorrer uma distância de  " + distancia +  " km.";
+
+    /* ACIMA É A TELA QUE MOSTRARÁ O RESULTADO PARA O USUÁRIO, 
+    TRAZENDO A CAPACIDADE DE ABASTECIMENTO DE ACORDO COM O QUANTO ELE TEM,
+    E O QUANTO ELE PODERÁ PERCORRER, COM OS LITROS ABASTECIDOS.
+    */
 
 }
 
