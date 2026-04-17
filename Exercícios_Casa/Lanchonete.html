@@ -3,9 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>• LANCHONETE •</title>
+    <title>☼ LARICÃO ☼</title>
 </head>
 <body>
+<center>
+    <hr><hr>
+
+    <h1>LANCHONETE<br/>☼ LARICÃO ☼</h1>
+    <hr><hr>
+
+    <h3> Fez a session? </h3>
+    <h2> LARIQUE-SE!</h2><br/>
+    Você merece esse prazer ...<br/>
     
+<br/>
+<hr>
+<br/>
+
+• CARDÁPIO •<br/><br/>
+BIG Burguer R$ 12,00<br/>
+BIG Fritas R$ 8,00 <br/>
+ICE Refri R$ 6,00 <br/>
+<br/>
+<hr>
+    </center>
+
+<form onsubmit="event.preventDefault(), calculadora()">
+    <label for="hamburguer"> Quantos hamburgueres foram vendidos hoje:  </label>
+    <input type="number" id="hamburguer" required>
+    <label for="fritas"> Quantas fritas foram vendidas hoje: </label>
+    <input type="number" id="fritas" required>
+    <label for="refri"> Quantos rerigerantes foram vendidos hoje: </label>
+    <input type="number" id="refri" required>
+</form><br/>
+
+<center><button type="button" onclick="calculadora()">Resultado</button></center><br/>
+
+<p id="faturamentoburguer"></p>
+<p id="faturamentofritas"></p>
+<p id="faturamentorefri"></p>
+<p id="faturamentototal"></p>
+
 </body>
+<script>
+    function calculadora() {
+
+        let burguer = parseInt(document.getElementById('hamburguer').value) ||0;
+        let frita = parseInt(document.getElementById('fritas').value) ||0;
+        let refri = parseInt(document.getElementById('refri').value) ||0;
+        let totalburguer = burguer * 12;
+        let totalfritas = frita * 8;
+        let totalrefri = refri * 6;
+        let total = totalburguer + totalfritas + totalrefri;
+
+        document.getElementById('faturamentoburguer').innerHTML = 
+        "Hoje você vendeu " + burguer + " hamburguer(es) → totalizando R$" + totalburguer + ",00";
+
+        document.getElementById('faturamentofritas').innerHTML = 
+        "Hoje você vendeu " + frita + " frita(s) → totalizando R$" + totalfritas + ",00";
+        
+        document.getElementById('faturamentorefri').innerHTML = 
+        "Hoje você vendeu " + refri + " refrigerante(s) → totalizando R$" + totalrefri + ",00";
+        
+        document.getElementById('faturamentototal').innerHTML = 
+        "Seu resultado do dia, foi de R$" + total + ",00 vendidos";
+
+        
+
+
+    }
+
+</script>
+
 </html>
