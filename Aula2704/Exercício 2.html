@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☼ Calculadora ☼</title>
+</head>
+
+<body>
+    <h1> Calculadora:</h1>
+    <hr> <!-- linha horizontal --> <br />
+    <form action="">
+        • Nota 1:<br />
+        <input type="number" id="n1"><br /><br />
+        • Nota 2:<br />
+        <input type="number" id="n2"><br /><br />
+
+        <button type="button" onclick="media()">Média</button>
+        <button type="button" onclick="calculadora()">Soma</button><br /><br />
+        <button type="reset"> Limpar</button><br /><br />
+        Resultado: <br />
+        <input type="text" id="somar" readonly="readonly"><br />
+        Média: <br />
+        <input type="text" id="medianotas" readonly="readonly">
+
+
+    </form>
+    <script>
+        function calculadora() {
+
+            // ENTRADA DE DADOS:
+            let x = parseInt(document.getElementById("n1").value);
+            let y = parseInt(document.getElementById("n2").value);
+
+            // PROCESSAMENTO:
+            let soma = x + y;
+
+            // SAÍDA: 
+            document.getElementById('somar').value = soma;
+        }
+        function media() {
+            let x = parseInt(document.getElementById("n1").value);
+            let y = parseInt(document.getElementById("n2").value);
+
+            let media = (x + y) / 2;
+
+            document.getElementById("medianotas").value = media;
+        }
+
+    </script>
+</body>
+
+</html>
