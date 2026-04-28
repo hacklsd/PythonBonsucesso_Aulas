@@ -1,0 +1,40 @@
+<!-- 7. Faça um script que pergunte em que turno você estuda.
+     Peça para digitar M-matutino ou V-Vespertino ou N- Noturno.
+     Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!"
+     ou "Valor Inválido!", conforme o caso.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudações</title>
+</head>
+
+<body>
+    <h1> Saudações! </h1>
+    <hr><br />
+    <form action="">
+        <h2>Digite o turno: <br />
+            (M-matutino, V-Vespertino, N-Noturno)</h2><br />
+        <input type="text" id="turno" maxlength="1">
+        <input type="button" onclick="saudacao()" value="verifique" /><br />
+        Resultado: <br />
+        <input type="text" id="resultado" readonly="readonly">
+    </form>
+    <script>
+        function saudacao() {
+            let resposta = document.getElementById("turno").value;
+            if (turno == 'M' || turno == 'm') {
+                document.getElementById('resultado').value = 'Bom dia!';
+            } else if (turno == 'V' || turno == 'v') {
+                document.getElementById('resultado').value = 'Boa tarde!';
+            } else if (turno == 'N' || turno == 'n') {
+                document.getElementById('resultado').value = 'Boa noite!';
+            }
+        }
+    </script>
+</body>
+
+</html>
