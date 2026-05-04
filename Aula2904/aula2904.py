@@ -2,12 +2,19 @@
  
 #   nome_da_variavel = valor
 #   EX: 
-#   nome = "Victor"     (string = letras, identifica-se pelas aspas, na atribuição do valor.)
-#   idade = 33          (Integer = número inteiro, identificado pelo número sem vírgula.
-#   altura = 1,75       (float = número decimal, identificado por casa decimal, uso de vírgula.)
-#   estudando = True    (Boolean = booleano, expressa unicamente verdadeiro ou falso (True - False).)
+#   nome = "Victor"    → (string = letras, identifica-se pelas aspas, na atribuição do valor.)
+#   idade = 33         → (Integer = número inteiro, identificado pelo número sem vírgula.
+#   altura = 1,75      → (float = número decimal, identificado por casa decimal, uso de vírgula.)
+#   estudando = True   → (Boolean = booleano, expressa unicamente verdadeiro ou falso (True - False).)
+#####################################################################################################
 
 #   • OPERADORES ARITMÉTICOS: OPERAR MATEMATICAMENTE NO CÓDIGO
+
+#   >         → Maior que 
+#   <         → Menor que 
+#   <=        → Menor o ou igual
+#   ==        → Igual
+#   !=        → Diferente
 
 #   + ADIÇÃO                → x + y
 #   - SUBTRAÇÃO             → x - y
@@ -17,6 +24,11 @@
 #   ** EXPONENCIAÇÃO        → x %% y
 #   // ARREDONDAR DIVISÃO   → x // y
 
+#   and  
+#   or  
+#   not
+#####################################################################################################
+
 #   • CONCATENAÇÃO: JUNÇÃO DE DOIS VALORES JÁ ATRIBUÍDOS
 
 #   a = "Hello "
@@ -24,6 +36,7 @@
 #   c = a + b 
 #   print(c)    
 #   → RESULTADO: Hello World
+#####################################################################################################
 
 #   • INPUT: ENTRADA DE DADOS ATRAVÉS DO USUÁRIO
 
@@ -31,3 +44,4 @@
 #   x = input()    → EXEMPLO: SUPONHA QUE O USUÁRIO DIGITOU "VICTOR"
 #   print = ("Hello, " + x)
 #   → RESULTADO: Hello, Victor
+#####################################################################################################
