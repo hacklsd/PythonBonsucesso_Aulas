@@ -1,0 +1,70 @@
+"""
+        1.Identação:
+
+        São blocos de alinhamento, que dizem "o que está contido dentro de algo".
+        Padrão oficial são 4 espaços.
+        Pode-se usar o TAB 
+        Não se pode misturar, usar 4 espaços depois TAB.
+"""
+    #   Exemplo:
+
+temperatura = 30
+if temperatura > 25:
+    print('Hoje está calor...') # Essa identação, mostra que: o print, está relacionado à condicional IF.
+
+    
+#############################################################################
+    
+
+""" 
+        2.Variáveis, explicitando ou casting: 
+
+         x = str(3)      → Vai ser uma string
+         y = int(3)      → Vai ser um inteiro
+        z = float(3)    → Vai ser um float
+        b = bool(1)     → Vai ser um booleano
+
+"""
+#############################################################################
+"""
+        3.Saber o tipo da variável:
+
+        É usada para saber o tipo da variável, exemplo a seguir: 
+
+        x = str(3)
+        print(type(x))
+
+        Saída na tela: <class 'str'>
+        Mostrando que, 3 no valor de x, é uma string ao invés de um número.
+
+        
+"""
+#############################################################################
+
+"""
+        4.Atribuindo múltiplas variáveis com um único dado: 
+
+
+
+
+"""
+#############################################################################
+
+"""
+        5.Condicional simples: IF e ELSE: 
+
+        Ao se deparar com uma dessas condicionais, o código ao invés de ser executado seguindo o fluxo natural (linha de cima para baixo),
+        o programa tem em seus parâmetros duas opções de ação: (usando o exemplo abaixo como modelo)
+        Se a temperatura for menor ou igual a 25, aparecerá uma determinada mensagem (Está frio), 
+        Se a temperatura for maior que 25, aparecerá outra mensagem (Está calor). 
+
+        temperatura = int(input('Qual a temperatura na sua cidade hoje? '))
+        if temperatura <= 25:
+            print('Hoje está frio...')
+        else:
+            print('Hoje está calor ...')
+
+        
+
+"""
+#############################################################################
