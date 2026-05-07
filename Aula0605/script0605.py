@@ -131,14 +131,19 @@ myfunc()
 #     Executando a função dentro da função
 """
 
+    # ESCOPO NÃO LOCAL: 
+x = "Escopo global"
+
 def myfunc1():
   x = "função 1"
   def myfunc2():
       nonlocal x
-      x = "função 2"
+      x = "alterado na função 2"
       print(x)
 
   myfunc2()
   print(x)    
 myfunc1()
+print(x)
+
 
