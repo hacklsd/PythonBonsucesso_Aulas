@@ -1,9 +1,12 @@
 def cadastro(n):
     print(f' {n}, Cadastro realizado com sucesso!!! ')
-def login(l):
+def login():
     print('Login realizado com sucesso!!! ')
 def sair():
     print('Saindo, obrigado por usar nosso serviços! ')
+def menu_principal():
+    while True:
+        print(menu)
 
 
 menu = '''
@@ -28,8 +31,10 @@ match opcoes:
 
     case 2: 
         login = input("Digite o nome de usuário: ")
-        login()
+        login(login)
     case 3: 
-        sair()
+        sair()        
     case _:
         print("Opção inválida! ")
+    
+menu_principal()
