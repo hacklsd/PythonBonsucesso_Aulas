@@ -1,7 +1,8 @@
 '''
-tratamento de strings
-funções
-loops com for
-uso do return
+- Tratamento de strings
+- Funções
+- Loops com for
+- Uso do return
+- Parâmetros e argumentos
 
 '''

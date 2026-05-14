@@ -17,7 +17,7 @@ juros_compostos()
 
 print(f"Seu valor rentabilizado é de R${montante} reais.")
 '''
-
+'''
 capital = 1000
 tempo = 5
 juros = 10
@@ -36,6 +36,8 @@ meses = ('janeiro', 'fevereiro', 'março', 'abril', 'maio')
 for montante in meses:
     montante = capital * (1 + taxa) ** tempo
     print(montante)
-    
+'''
+
+
 
 
