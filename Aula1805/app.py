@@ -27,7 +27,7 @@ def login():
 
 
 def trocar_senha():
-    print("Na tela de trocar a senha: ")
+    print("→ Tela de trocar a senha: ")
     nome = input('Usuário: ')
     senha_atual = int(input('Senha atual: '))
     for user in usuarios:
@@ -36,7 +36,7 @@ def trocar_senha():
             print("Senha alterada com sucesso! ")
             return
     print("Dados inválidos. ")
-
+ 
 
 def sistema():
     while True:
