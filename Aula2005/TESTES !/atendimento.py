@@ -1,4 +1,3 @@
-import bank
 
 def atendimento():
     print('\nATENDIMENTO:')
@@ -24,7 +23,7 @@ def atendimento():
             #pix()
         case "4":
             print('...VOLTANDO AO MENU PRINCIPAL...')
-            bank.sistema()
+            #bank.sistema()
 
         case "_":
             print('OPÇÃO INVÁLIDA!')
