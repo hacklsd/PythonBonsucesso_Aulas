@@ -1,6 +1,1 @@
-import platform
-
-x = platform.system()
-print(x)
-
-
+from platform import system, uname
