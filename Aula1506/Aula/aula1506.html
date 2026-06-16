@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button type="button" onclick="load()">Requisitar API CEP</button>
+
+    <p id="demo"> </p>
+    <label>Insira seu CEP:</label>
+    <input type="text" id="cep">
+
+    <script>
+        function load() {
+            let cep = document.getElementById("cep").value; 
+            var requisicao = new XMLHttpRequest();
+            requisicao.open("GET", "https://viacep.com.br/ws/"+ cep +"/json/");
+
+            requisicao.send();
+
+            requisicao.onload = function () {
+                if (requisicao.status == 200) {
+                    resposta = requisicao.response;
+                    responseObj = JSON.parse(resposta);
+                    document.querySelector("#demo").innerHTML = responseObj.logradouro;
+                }
+            };
+        }
+
+    </script>
+
+</body>
+
+</html>
