@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <center>
+        <label>Insira seu CEP:</label>
+        <input type="number" id="cep"><br><br>
+
+        <button type="button" onclick="load()">Requisitar API CEP</button>
+        <button onclick="pegatexto ()">Busca texto do parágrafo</button><br>
+        <br>
+        <a href="site.com.br" id="meulinkexterno">SITE DA VOVÓ</a>
+        <button onclick="getlinkexterno()">Pegar link</button>
+        <button onclick="enviarPerguntas()">enviar</button>
+
+        <hr>
+
+        <p class="pegatexto" id="demo"></p>
+
+    </center>
+
+    <script>
+        function load() {
+            let cep = document.getElementById("cep").value;
+            var requisicao = new XMLHttpRequest();
+            requisicao.open("GET", "https://viacep.com.br/ws/" + cep + "/json/");
+
+            requisicao.send();
+
+            requisicao.onload = function () {
+                if (requisicao.status == 200) {
+                    resposta = requisicao.response;
+                    responseObj = JSON.parse(resposta);
+                    document.querySelector("#demo").innerHTML = responseObj.logradouro;
+
+                }
+            };
+        }
+
+        function pegatexto() {
+            const titulo = document.querySelector(".pegatexto").innerText;
+            oquefoidigitado(titulo);
+        }
+
+        function oquefoidigitado(p) {
+            alert(p);
+        }
+
+        function getlinkexterno() {
+            const linkexterno = document.getElementById("meulinkexterno").getAttribute('href');
+            oquefoidigitado(linkexterno)
+        }
+
+        /// ▼ SCRIPT DE ENVIO DE DADOS - CONEXÃO BANCO DE DADOS JSON ▼ ///
+        async function enviarPerguntas() {
+            const url = 'http://10.139.206.132:3000/perguntas';
+
+            const dados =
+            {
+                "pergunta": "Victor",
+                "resposta": "Senac",
+                "id": "ALELUIAAAAA ▲ ▲ "
+            };
+                
+
+            try {
+                const resposta = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(dados)
+                });
+
+                if (!resposta.ok) {
+                    throw new Error(`Erro na requisição: ${resposta.status}`);
+                }
+
+                const resultado = await resposta.json();
+                console.log('Dados enviados com sucesso:', resultado);
+                return resultado;
+
+            } catch (erro) {
+                console.error('Falha ao enviar dados:', erro);
+            }
+        }
+
+        enviarPerguntas();
+
+
+    </script>
+
+</body>
+
+</html>
