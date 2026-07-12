@@ -345,9 +345,11 @@ Python continua executando.
 11. Executando arquivos Python:
 
 
-    subprocess.run("python app.py")
+        subprocess.run("python app.py")
+    
 Ou
-    subprocess.Popen("python app.py")
+
+        subprocess.Popen("python app.py")
 
 Muito usado em sistemas modulares.
 
