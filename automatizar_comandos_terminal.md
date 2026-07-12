@@ -275,17 +275,23 @@ Em poucos segundos tudo está pronto.
 9. Abrindo programas:
 
 Windows
+
     subprocess.run("notepad")
-    ou
+    
+ou
+
     subprocess.Popen("notepad")
 
 Abrir calculadora
+
     subprocess.Popen("calc")
 
 Abrir Paint
+
     subprocess.Popen("mspaint")
 
 Abrir VS Code
+
     subprocess.Popen("code")
 
 
