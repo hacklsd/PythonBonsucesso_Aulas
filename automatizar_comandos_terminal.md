@@ -100,11 +100,11 @@ Hoje quase sempre usamos:
 
 
 
-Primeiro exemplo:
+3. Primeiro exemplo:
 
-    import subprocess
+       import subprocess
     
-    subprocess.run("dir", shell=True)
+       subprocess.run("dir", shell=True)
 
 No Linux:
 
@@ -120,18 +120,18 @@ O Python pediu para o Windows executar: dir
 
 Entendendo linha por linha
 
-import subprocess
-Importa o módulo.
+    import subprocess
+ Importa o módulo.
 
-subprocess.run(...)
-Executa um comando.
+    subprocess.run(...)
+ Executa um comando.
 
-"dir"
-É exatamente o que você digitaria.
+    "dir"
+ É exatamente o que você digitaria.
 
-shell=True
-Diz ao Python:
-Execute usando o CMD/PowerShell.
+    shell=True
+ Diz ao Python:
+ Execute usando o CMD/PowerShell.
 
 
 
@@ -139,17 +139,17 @@ Execute usando o CMD/PowerShell.
 4. Executando vários comandos:
 
     
-    import subprocess
-    
-    comandos = [
-        "mkdir Projeto",
-        "cd Projeto",
-        "python -m venv venv"
-    ]
-    
-    for comando in comandos:
-        subprocess.run(comando, shell=True)
-    
+        import subprocess
+        
+        comandos = [
+            "mkdir Projeto",
+            "cd Projeto",
+            "python -m venv venv"
+        ]
+        
+        for comando in comandos:
+            subprocess.run(comando, shell=True)
+        
 Observe um detalhe importante.
 Este código possui um problema.
 
@@ -159,7 +159,7 @@ Cada chamada cria um novo terminal.
 
 Então:
 
-cd Projeto
+    cd Projeto
 não permanece.
 
 O próximo comando volta para a pasta anterior.
@@ -186,16 +186,16 @@ Agora o comando acontece dentro da pasta.
 
 5. Capturando a saída:
     
-    import subprocess
-    
-    resultado = subprocess.run(
-        "python --version",
-        shell=True,
-        capture_output=True,
-        text=True
-    )
-    
-    print(resultado.stdout)
+        import subprocess
+        
+        resultado = subprocess.run(
+            "python --version",
+            shell=True,
+            capture_output=True,
+            text=True
+        )
+        
+        print(resultado.stdout)
 
 Saída:
 
@@ -218,19 +218,19 @@ Código de retorno.
 6. Verificando erros:
 
     
-    import subprocess
-    
-    resultado = subprocess.run(
-        "python --version",
-        shell=True,
-        capture_output=True,
-        text=True
-    )
-    
-    if resultado.returncode == 0:
-        print("Tudo certo!")
-    else:
-        print("Erro.")
+        import subprocess
+        
+        resultado = subprocess.run(
+            "python --version",
+            shell=True,
+            capture_output=True,
+            text=True
+        )
+        
+        if resultado.returncode == 0:
+            print("Tudo certo!")
+        else:
+            print("Erro.")
    
 Todo comando retorna um número, 0, sucesso.
 
@@ -241,11 +241,11 @@ Qualquer outro número, erro.
 7. Executando Git:
  
 
-    subprocess.run("git init", shell=True)
-    
-    subprocess.run("git add .", shell=True)
-    
-    subprocess.run('git commit -m "Primeiro commit"', shell=True)
+        subprocess.run("git init", shell=True)
+        
+        subprocess.run("git add .", shell=True)
+        
+        subprocess.run('git commit -m "Primeiro commit"', shell=True)
 
 
 Muito usado em automações.
@@ -374,52 +374,52 @@ Imagine um arquivo chamado: instalar.py
 
 13. Automatizando uma máquina: 
 
-    subprocess.run("git pull", shell=True)
-    
-    subprocess.run("pip install -r requirements.txt", shell=True)
-    
-    subprocess.run("python manage.py migrate", shell=True)
-    
-    subprocess.run("python manage.py collectstatic --noinput", shell=True)
-    
-    subprocess.run("python manage.py runserver", shell=True)
+        subprocess.run("git pull", shell=True)
+        
+        subprocess.run("pip install -r requirements.txt", shell=True)
+        
+        subprocess.run("python manage.py migrate", shell=True)
+        
+        subprocess.run("python manage.py collectstatic --noinput", shell=True)
+        
+        subprocess.run("python manage.py runserver", shell=True)
 
 Um único arquivo prepara todo o projeto.
 
 
 14. Criando menus:
 
-    import subprocess
+        import subprocess
+        
+        while True:
     
-    while True:
-
-    print("1 - Abrir VS Code")
-    print("2 - Abrir Calculadora")
-    print("3 - Sair")
-
-    opcao = input("> ")
-
-    if opcao == "1":
-        subprocess.Popen("code")
-
-    elif opcao == "2":
-        subprocess.Popen("calc")
-
-    elif opcao == "3":
-        break
+        print("1 - Abrir VS Code")
+        print("2 - Abrir Calculadora")
+        print("3 - Sair")
+    
+        opcao = input("> ")
+    
+        if opcao == "1":
+            subprocess.Popen("code")
+    
+        elif opcao == "2":
+            subprocess.Popen("calc")
+    
+        elif opcao == "3":
+            break
         
         
 15. Capturando erros:
 
-    resultado = subprocess.run(
-        "git status",
-        shell=True,
-        capture_output=True,
-        text=True
-    )
-    
-    print(resultado.stdout)
-    print(resultado.stderr)
+        resultado = subprocess.run(
+            "git status",
+            shell=True,
+            capture_output=True,
+            text=True
+        )
+        
+        print(resultado.stdout)
+        print(resultado.stderr)
 
 Assim você consegue registrar logs para depuração
 
