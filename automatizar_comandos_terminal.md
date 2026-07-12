@@ -1,4 +1,4 @@
- Saber automatizar o Terminal é uma das habilidades que mais aumenta sua produtividade com Python. É a base para criar instaladores, ferramentas DevOps, deploys, automações de servidores, scripts para Django e até bots.
+Saber automatizar o Terminal é uma das habilidades que mais aumenta sua produtividade com Python. É a base para criar instaladores, ferramentas DevOps, deploys, automações de servidores, scripts para Django e até bots.
 
 
 
@@ -100,7 +100,7 @@ Hoje quase sempre usamos:
 
 
 
-3. Primeiro exemplo:
+Primeiro exemplo:
 
     import subprocess
     
