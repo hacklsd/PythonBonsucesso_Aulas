@@ -205,13 +205,13 @@ Saída:
 O objeto resultado
 Possui diversas informações.
 
-resultado.stdout
+    resultado.stdout
 Saída normal.
 
-resultado.stderr
+    resultado.stderr
 Erros.
 
-resultado.returncode
+    resultado.returncode
 Código de retorno.
 
 
