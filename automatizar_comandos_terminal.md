@@ -503,4 +503,5 @@ Boas práticas:
     Gerar um arquivo de log com o resultado de cada comando executado.
     
     
-    Esse projeto reúne praticamente todas as técnicas estudadas e é uma excelente base para construir ferramentas maiores, como um gerenciador de projetos ou sua assistente Lumi.
+    Esse projeto reúne praticamente todas as técnicas estudadas e 
+    é uma excelente base para construir ferramentas maiores posteriormente.
